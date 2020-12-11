@@ -27,7 +27,6 @@ function Base.push!(s::IntSet, v::Int)
 end
 
 Base.@propagate_inbounds function Base.union!(s::IntSet, itr)
-    Base.haslength(itr) && sizehint!(s.set,length(s)+length(itr))
     for v in itr
         push!(s,v)
     end

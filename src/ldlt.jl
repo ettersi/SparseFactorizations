@@ -112,7 +112,6 @@ function symbolic_ildlt_lof(Ap,Ai,c)
             append!(Fi, sort!(Fi_aj.set)); empty!(Fi_aj)
             Fp[j+1] = length(Fi)+1
 
-            sizehint!(Fl,length(Fi))
             for i = @view Fi[Fp[j]:length(Fi)]
                 push!(Fl,Fl_aj[i])
                 Fl_aj[i] = typemax(Int)
